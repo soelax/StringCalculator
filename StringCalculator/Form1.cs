@@ -16,5 +16,18 @@ namespace StringCalculator
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var first = "99";
+            var second = "123";
+
+            var adder = new StringAdder();
+            var multiplier = new StringMultiplier();
+            var summe = adder.add(first, second);
+            var produkt = multiplier.multiply(first, second);
+
+            System.Diagnostics.Debugger.Log(0, "", $"Resultate: Addition: {summe}, Multiplikation: {produkt}");
+        }
     }
 }
